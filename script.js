@@ -482,7 +482,7 @@ const recipes = [
   },
    {
     title: "Zucchini Bread",
-    image: "images/Zucchini bread.jpg",
+    image: "images/Zucchini Bread.jpg",
     ingredients: [
      "2 cups of grated zucchini",
      "2 cups of flour",
