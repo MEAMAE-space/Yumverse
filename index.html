@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yumverse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Yumverse</h1>
+    <input type="text" id="searchBar" placeholder="Search recipes...">
+  </header>
+
+  <!-- Featured Slider -->
+<section class="featured-slider">
+  <div class="slider-wrapper" id="featuredSlider">
+    <div class="slide">
+      <img src="images/Red Velvet Dream Cake.jpg" alt="Red Velvet Cake">
+      <div class="slide-info">
+        <h2>Red Velvet Cake</h2>
+        <p>Rich and fluffy with cream cheese frosting.</p>
+        <button onclick="showRecipePopup(recipes[2])">View Recipe</button>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/Chocolate Chip Cake.jpg" alt="Chocolate Chip Cake">
+      <div class="slide-info">
+        <h2>Chocolate Chip Cake</h2>
+        <p>A sweet treat for chocolate lovers.</p>
+        <button onclick="showRecipePopup(recipes[1])">View Recipe</button>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/Vanilla cupcakes.jpg" alt="Vanilla Cupcakes">
+      <div class="slide-info">
+        <h2>Vanilla Cupcakes</h2>
+        <p>Light, fluffy and perfect for any occasion.</p>
+        <button onclick="showRecipePopup(recipes[0])">View Recipe</button>
+      </div>
+    </div>
+  </div>
+  <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+  <button class="slider-btn next" onclick="nextSlide()">❯</button>
+</section>
+
+<!-- Carousel Layout -->
+<h2 class="section-title">Popular Recipes</h2>
+<section class="carousel-layout" id="carouselGallery"></section>
+
+<!-- Masonry Layout -->
+<h2 class="section-title">All Recipes</h2>
+<section class="masonry-layout" id="recipeGallery"></section>
+<script src="script.js"></script>
+</body>
+</html>

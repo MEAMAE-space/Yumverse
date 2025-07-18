@@ -1,0 +1,196 @@
+/* Gradient + Cupcake Pattern Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf6;
+  background-image:
+    linear-gradient(135deg, #fff8f2, #fdfaf6, #fdece6),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23e07b7b' fill-opacity='0.15'%3E%3Cpath d='M30 10c-5 0-10 4-10 9h20c0-5-5-9-10-9zm-10 11c-2 0-4 2-4 4h28c0-2-2-4-4-4H20zm-4 6c0 7 6 13 14 13s14-6 14-13H16z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 80px 80px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  font-size: 2.5em;
+  color: #e07b7b;
+}
+#searchBar {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.section-title {
+  margin: 30px 20px 10px;
+  color: #e07b7b;
+  font-size: 1.8em;
+}
+
+/* Featured Slider */
+.featured-slider {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.slide-info h2 {
+  margin: 0;
+}
+
+.slide-info button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #e07b7b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.slider-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/* Carousel Layout */
+.carousel-layout {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+}
+.carousel-layout::-webkit-scrollbar {
+  display: none;
+}
+.carousel-layout .recipe-card {
+  flex: 0 0 auto;
+  width: 220px;
+  scroll-snap-align: start;
+}
+
+/* Masonry Layout */
+.masonry-layout {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
+}
+.masonry-layout .recipe-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Recipe Cards */
+.recipe-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.recipe-card img {
+  width: 100%;
+}
+.recipe-card h3 {
+  padding: 10px;
+  color: #e07b7b;
+}
+
+/* Popup */
+.recipe-popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.recipe-popup {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.recipe-popup h2 {
+  color: #e07b7b;
+}
+.recipe-popup h3 {
+  margin-top: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
