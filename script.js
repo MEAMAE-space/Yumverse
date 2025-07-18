@@ -1,7 +1,7 @@
 const recipes = [
   {
     title: "Chocolate Chip Cake",
-    image: "images/Chocolate chip cake.jpg",
+    image: "images/Chocolate Chip Cake.jpg",
     ingredients: [
       "1 cup flour",
       "1/2 cup sugar",
@@ -89,7 +89,7 @@ const recipes = [
   },
    {
     title: "Lemon Pound Cake",
-    image: "images/Lemon Pound Cake.jpg",
+    image: "images/Lemon pound cake.jpg",
     ingredients: [
       '1 1/2 cups of flour.',
       "1 Cup sugar.",
